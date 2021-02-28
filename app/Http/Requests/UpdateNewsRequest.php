@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class NewsRequest extends FormRequest
+class UpdateNewsRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -28,7 +28,7 @@ class NewsRequest extends FormRequest
 //
             'news_title' => 'required|string|max:500',
 
-            'news_img' => 'required_without:id|mimes:jpg,jpeg,png|max:10048',
+            'news_img' => 'nullable:id|mimes:jpg,jpeg,png|max:10048',
 
             'news_desc'   => 'required|string|max:5000',
 

@@ -20,10 +20,10 @@ class JobController extends Controller
         return view('careers.job',['job'=>$job]);
 
     }
-    function detail($news_id){
-        $newsDetail=DB::table('news')->where(['id'=>$news_id])->get();
-        return view('news.details',['newsDetail'=>$newsDetail]);
-    }
+//    function detail($news_id){
+//        $newsDetail=DB::table('news')->where(['id'=>$news_id])->get();
+//        return view('news.details',['newsDetail'=>$newsDetail]);
+//    }
 
     /**
      * Show the form for creating a new resource.

@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class LanguageRequest  extends FormRequest
+class UpdateLanguageRequest  extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -27,7 +27,7 @@ class LanguageRequest  extends FormRequest
 
             'title' => 'required|string|max:50',
             'description' => 'required|string|max:100',
-            'image' => 'required_without:id|mimes:jpg,jpeg,png|max:15048',
+            'image' => 'nullble:id|mimes:jpg,jpeg,png|max:15048',
           //  'statu' => 'required|in:1',
 
         ];

@@ -6,6 +6,7 @@ use App\Apply;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\JobsRequest;
 
+use App\Http\Requests\UpdateJobsRequest;
 use App\Models\Jobs;
 use Monolog\Handler\IFTTTHandler;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
@@ -112,7 +113,7 @@ else
         }
     }
 
-    public function update($id, JobsRequest $request)
+    public function update($id, UpdateJobsRequest $request)
     {
 
         try {

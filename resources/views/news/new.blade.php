@@ -15,13 +15,13 @@
                     <div class="single-news-content inner-box inner-box-news">
                         <figure class="image-box">
 
-                            <img src="{{ asset($n->news_img)}}" alt="{{ $n->news_title }}"
+                            <img src="{{ asset($n->news_img)}}" alt="{{$n->news_title }}"
                                  alt="" width="310" height="235">
                             <!--Overlay Box-->
                             <div class="overlay-box">
                                 <div class="overlay-inner">
                                     <div class="content">
-                                        <a href="{{URL::to('news/details/'.$n->id) }}"
+                                        <a href="{{url('news/details/'.$n->id) }}"
                                            class="link"><i
                                                 class="icon fa fa-link"></i></a>
                                     </div>
@@ -30,7 +30,7 @@
                         </figure>
                         <div class="lower-content">
                             <h4>
-                                <a style="height: 100px" href="{{ url('news/details/'.$n->id) }}"> {{ $n->news_title }} </a>
+                                <a style="height: 100px" href="{{ url('news/details/'.$n->id)}}"> {{$n->news_title }} </a>
                             </h4>
 
                             <div class="num" style="color: #00A8FF;">{{   date('Y-m-d', strtotime ($n-> created_at))  }}</div>

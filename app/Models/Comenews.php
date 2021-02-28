@@ -10,7 +10,7 @@ class Comenews extends Model
 {
     use Notifiable;
     protected $table='news';
-    protected $fillable    =['id','news_title','news_desc','phone','news_img','information'  ];
+    protected $fillable    =['id','news_title','news_desc','phone','news_img','information'];
 
 
 

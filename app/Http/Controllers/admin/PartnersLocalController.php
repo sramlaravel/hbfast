@@ -7,6 +7,7 @@ use App\Http\Requests\LocalRequest;
 use App\Http\Requests\PartnersRequest;
 
 
+use App\Http\Requests\UpdateLocalRequest;
 use App\Models\Banks;
 use App\Models\Partners;
 use App\Models\PartnersLocal;
@@ -97,7 +98,7 @@ class PartnersLocalController extends Controller
         return view('admin.localparnters.edit', compact('Partners'));
     }
 
-    public function update($id, LocalRequest $request)
+    public function update($id, UpdateLocalRequest $request)
     {
 
         try {

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ServicesRequest;
 
+use App\Http\Requests\UpdateServicesRequest;
 use App\Models\Services;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -88,7 +89,7 @@ class ServicesController extends Controller
         return view('admin.mainservice.edit', compact('services'));
     }
 
-    public function update($id, ServicesRequest $request)
+    public function update($id, UpdateServicesRequest $request)
     {
 
         try {

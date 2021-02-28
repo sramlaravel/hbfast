@@ -6,6 +6,7 @@ use App\country;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\NewsRequest;
  ;
+use App\Http\Requests\UpdateNewsRequest;
 use App\Models\Comenews;
 
 
@@ -85,7 +86,7 @@ return  $ex;
         }
     }
 
-    public function update($id, NewsRequest $request)
+    public function update($id, UpdateNewsRequest $request)
     {
 
         try {

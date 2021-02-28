@@ -44,10 +44,10 @@ Route::get('agent/index/','countriescontroller@index');
 
 
 
-Route::get('news','NewsController@index');
-//Route::get('news/new','NewsController@index');
+Route::get('news','Newscontroller@index');
+Route::get('news/new','NewsController@index');
 
-Route::get('news/details/{id}','NewsController@detail');
+Route::get('news/details/{id}','Newscontroller@detail');
 
 Route::get('localservices/{id}','localPartnerController@index');
 

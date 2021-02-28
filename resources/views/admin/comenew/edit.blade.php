@@ -50,13 +50,13 @@
 
                                             <div class="form-group">
                                                 <div class="text-center">
-                                                    <img src="{{asset($News -> news_img)}}" class="rounded-circle  height-150" alt="صورة الوكيل  ">
+                                                    <img src="{{asset($News ->news_img)}}" class="rounded-circle  height-150" alt="صورة الوكيل  ">
                                                 </div>
                                             </div>
 
                                             <label> الصوره </label>
                                             <label id="projectinput7" class="file center-block">
-                                                <input type="file" id="file" name="news_img">
+                                                <input type="file" id="file" name="news_img" value="{{asset($News ->news_img)}}">
                                                 <span class="file-custom"></span>
                                             </label>
                                             @error('news_img')

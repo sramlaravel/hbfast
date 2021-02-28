@@ -18,10 +18,10 @@ class Newscontroller extends Controller
         // News Index Page
 
             $news=News::orderBy  ('id','DESC')->paginate(9);
-            return view('news.new',['news'=>$news]);
+            return view('news.new',compact('news'));
 
     }
-    function detail($news_id){
+    public  function detail($news_id){
         $newsDetail=DB::table('news')->where(['id'=>$news_id])->get();
         return view('news.details',compact('newsDetail'));
     }

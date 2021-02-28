@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class LanguageRequest  extends FormRequest
+class UpdateServicesRequest  extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,11 +23,14 @@ class LanguageRequest  extends FormRequest
      */
     public function rules()
     {
+
         return [
 
-            'title' => 'required|string|max:50',
-            'description' => 'required|string|max:100',
-            'image' => 'required_without:id|mimes:jpg,jpeg,png|max:15048',
+            'title' => 'required|string|max:100',
+            'title_desc' => 'required|string|max:400',
+            'model' => 'required|string|max:10',
+            'description' => 'required|string|max:2000',
+            'image' => 'nullable:id||mimes:jpg,jpeg,png|max:15048',
           //  'statu' => 'required|in:1',
 
         ];
@@ -39,9 +42,9 @@ class LanguageRequest  extends FormRequest
             'required' => 'هذا الحقل مطلوب',
             'in' => 'القيم المدخلة غير صحيحة ',
             'title.string' => 'اسم العنوان  لابد ان يكون احرف',
-            'description.max' => 'العنوان  لابد الا يزيد عن 100 احرف ',
+            'title.max' => 'العنوان  لابد الا يزيد عن 100 احرف ',
             'image.max' => 'الصورة هذه لا يزيد حجمها عن 20 ميجا بايت  ',
-            'required_without'=>'الصوؤه مطلوبه الرجاء تحميل الصوره'
+            'title_desc.max'=>'وصف العنوان يزيد عن 400 حرف اخي العزيز اختصر الموضوع'
         ];
     }
 }

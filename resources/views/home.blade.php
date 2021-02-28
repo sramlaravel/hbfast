@@ -53,14 +53,9 @@
                 {{--</div>--}}
             </div>
             <div>
-
-
-
         </div>
 
         </div>
-        <br>
-        <br>
         <br>
         <br>
         <section class="section-padding about-box bg-light" style="background-color: #0058a9!important; color: white;">

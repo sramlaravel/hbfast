@@ -21,7 +21,7 @@ class BanksController extends Controller
     {
         $Banks = Banks::selection()->paginate(PAGINATION_COUNT);
 
-        return view('admin.banks.index', compact('Banks'));
+        return view('admin.Banks.index', compact('Banks'));
     }
 
     public function create()
@@ -29,7 +29,7 @@ class BanksController extends Controller
 
 
 
-        return view('admin.banks.create' );
+        return view('admin.Banks.create' );
     }
 
 
